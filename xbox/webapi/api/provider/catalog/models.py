@@ -32,7 +32,7 @@ class Image(PascalCaseModel):
     foreground_color: Optional[str]
     height: int
     image_position_info: Optional[str]
-    image_purpose: str
+    image_purpose: Optional[str]
     unscaled_image_sha256_hash: Optional[str] = Field(alias="UnscaledImageSHA256Hash")
     uri: str
     width: int
@@ -45,7 +45,7 @@ class Video(PascalCaseModel):
     width: int
     audio_encoding: str
     video_encoding: str
-    video_position_info: str
+    video_position_info: Optional[str]
     caption: str
     file_size_in_bytes: int
     preview_image: Image
